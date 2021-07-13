@@ -3,6 +3,7 @@
 # @Author  : 吴佳杨
 
 from tensorflow import keras
+import tensorflow as tf
 import tensorflow.keras.backend as K
 from tensorflow.keras.preprocessing.text import *
 import pandas as pd
@@ -10,6 +11,11 @@ import numpy as np
 
 BATCH_SIZE = 8          # 每个batch的数据量，如果代码无法运行可适当降低
 MAXLEN = 256            # 限制句子的最大长度
+
+# 如没有GPU或者代码报错可删除这一块
+gpus = tf.config.experimental.list_physical_devices('GPU')
+for gpu in gpus:
+    tf.config.experimental.set_memory_growth(gpu, True)
 
 
 class DataGenerator(keras.utils.Sequence):
@@ -93,4 +99,5 @@ model = keras.models.load_model('cnn_model.h5', custom_objects={"F1_score": F1_s
 y = model.predict(test_generator, verbose=1)
 y = np.argmax(y, axis=-1)
 y = pd.DataFrame({'label': y})
-y.to_csv('y_pred.csv')
+y['id'] = y.index
+y.to_csv('y_pred.csv', index=False)
