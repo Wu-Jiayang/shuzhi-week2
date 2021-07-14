@@ -41,7 +41,7 @@
 
 #### 评估标准
 
-本次考核使用的是[F1-micro]([sklearn中 F1-micro 与 F1-macro区别和计算原理_lyb3b3b的专栏-CSDN博客](https://blog.csdn.net/lyb3b3b/article/details/84819931?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control))作为评估标准
+本次考核使用的是[F1-micro](https://blog.csdn.net/lyb3b3b/article/details/84819931?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control)作为评估标准
 
 
 
